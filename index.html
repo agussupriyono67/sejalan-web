@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sejalan — Jasa Setup AI Agent, Peningkatan Bisnis, Analisa Bisnis & Advertiser</title>
+  <meta name="description" content="Sejalan: Mitra transformasi bisnis modern. Layanan Setup AI Agent 24/7, Peningkatan & Skalasi Bisnis, Analisa Data Bisnis, dan Jasa Advertiser Meta & Google Ads berkinerja tinggi.">
+  <meta name="keywords" content="setup ai agent, jasa ai agent, otomatisasi bisnis, konsultan bisnis, analisa data bisnis, jasa pasang iklan, meta ads, google ads, sejalan">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              900: '#0c4a6e',
+              accent: '#06b6d4',
+              gold: '#f59e0b',
+              dark: '#080c14',
+              card: '#0f172a',
+              cardBorder: '#1e293b'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { background-color: #070a12; color: #f1f5f9; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+    .glow-cyan { text-shadow: 0 0 24px rgba(6, 182, 212, 0.45); }
+    .glow-blue { box-shadow: 0 0 40px -10px rgba(14, 165, 233, 0.3); }
+    .card-glass {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .card-glass:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateY(-4px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .badge-pill {
+      background: rgba(14, 165, 233, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: #38bdf8;
+    }
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-grid antialiased selection:bg-cyan-500 selection:text-slate-900">
+
+  <!-- TOP ANNOUNCEMENT BAR: VIRTUAL OFFICE -->
+  <div class="bg-gradient-to-r from-blue-900/60 via-cyan-900/40 to-slate-900/80 border-b border-cyan-500/20 py-2.5 px-4 text-xs font-semibold text-center flex items-center justify-center gap-2">
+    <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 font-bold text-[10px] uppercase tracking-wider animate-pulse">
+      <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> LIVE 3D DEMO
+    </span>
+    <span class="text-slate-300">Intip langsung bagaimana AI Agent kami bekerja secara real-time di markas 3D!</span>
+    <a href="/office/" class="text-cyan-400 hover:text-cyan-300 font-bold underline flex items-center gap-1 ml-1 transition">
+      Masuk ke Virtual Office 3D <i class="fa-solid fa-arrow-right text-[10px]"></i>
+    </a>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-50 bg-[#070a12]/80 backdrop-blur-md border-b border-white/5 px-4 sm:px-8 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition">
+          S
+        </div>
+        <div>
+          <span class="font-display font-extrabold text-xl tracking-tight text-white block leading-none">
+            SEJALAN<span class="text-cyan-400">.</span>
+          </span>
+          <span class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">Business Growth & AI Agency</span>
+        </div>
+      </a>
+
+      <!-- Menu Navigation -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+        <a href="#layanan" class="hover:text-cyan-400 transition">4 Pilar Solusi</a>
+        <a href="#ai-agent" class="hover:text-cyan-400 transition">Setup AI Agent</a>
+        <a href="#advertiser" class="hover:text-cyan-400 transition">Jasa Iklan (Ads)</a>
+        <a href="#analisa" class="hover:text-cyan-400 transition">Analisa Bisnis</a>
+        <a href="/office/" class="flex items-center gap-1.5 text-cyan-300 px-3 py-1.5 rounded-lg bg-cyan-950/60 border border-cyan-800/60 hover:bg-cyan-900/50 transition">
+          <i class="fa-solid fa-cube text-xs"></i> 3D Virtual Office
+        </a>
+      </div>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/6289670236337?text=Halo%20Mas%20Agus%2C%20saya%20tertarik%20konsultasi%20mengenai%20layanan%20Sejalan..." target="_blank" rel="noopener" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold text-xs sm:text-sm shadow-md shadow-cyan-500/25 transition flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-base"></i> Konsultasi Gratis
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="relative pt-16 pb-24 px-4 sm:px-8 max-w-6xl mx-auto text-center">
+    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-cyan-500/15 via-blue-600/10 to-indigo-600/15 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full badge-pill text-xs font-bold mb-6">
+      <i class="fa-solid fa-bolt text-cyan-400 text-xs"></i>
+      <span>Akselerasi Bisnis Modern Berbasis Otomasi & Performance Marketing</span>
+    </div>
+
+    <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.1] mb-6">
+      Bisnis Tumbuh Cepat, <br class="hidden sm:block">
+      <span class="bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500 bg-clip-text text-transparent">Operasional Jalan Otomatis.</span>
+    </h1>
+
+    <p class="text-base sm:text-xl text-slate-400 max-w-2xl mx-auto font-normal leading-relaxed mb-10">
+      Sejalan mengintegrasikan <strong class="text-slate-200">Karyawan AI 24/7</strong>, <strong class="text-slate-200">Iklan Berkinerja Tinggi</strong>, dan <strong class="text-slate-200">Strategi Analisa Bisnis</strong> agar usaha Anda tidak lagi bergantung pada lembur manual.
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+      <a href="https://wa.me/6289670236337?text=Halo%20Mas%20Agus%2C%20saya%20ingin%20diskusi%20kebutuhan%20otomasi%20dan%20iklan%20bisnis%20saya..." target="_blank" rel="noopener" class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-extrabold text-sm shadow-xl shadow-cyan-400/20 transition flex items-center justify-center gap-2.5">
+        <i class="fa-brands fa-whatsapp text-lg text-emerald-950"></i>
+        <span>Mulai Konsultasi Bisnis</span>
+      </a>
+
+      <a href="/office/" class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-bold text-sm transition flex items-center justify-center gap-2 group">
+        <i class="fa-solid fa-vr-cardboard text-cyan-400 group-hover:scale-110 transition"></i>
+        <span>Buka Kantor 3D LIVE</span>
+      </a>
+    </div>
+
+    <!-- Quick Metrics Banner -->
+    <div class="mt-16 pt-8 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-left">
+      <div class="card-glass p-5 rounded-2xl">
+        <span class="text-2xl sm:text-3xl font-display font-extrabold text-cyan-400 block mb-1">24 / 7</span>
+        <span class="text-xs text-slate-400 font-medium">Respon Chat & AI Dispatch Tanpa Libur</span>
+      </div>
+      <div class="card-glass p-5 rounded-2xl">
+        <span class="text-2xl sm:text-3xl font-display font-extrabold text-emerald-400 block mb-1">3x - 5x</span>
+        <span class="text-xs text-slate-400 font-medium">Target ROAS Skalasi Kampanye Iklan</span>
+      </div>
+      <div class="card-glass p-5 rounded-2xl">
+        <span class="text-2xl sm:text-3xl font-display font-extrabold text-sky-400 block mb-1">-70%</span>
+        <span class="text-xs text-slate-400 font-medium">Pemangkasan Biaya & Beban Kerja Rutin</span>
+      </div>
+      <div class="card-glass p-5 rounded-2xl">
+        <span class="text-2xl sm:text-3xl font-display font-extrabold text-amber-400 block mb-1">100%</span>
+        <span class="text-xs text-slate-400 font-medium">Keputusan Berdasarkan Data Valid</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 4 PILAR UTAMA LAYANAN SEJALAN -->
+  <section id="layanan" class="py-20 px-4 sm:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-extrabold tracking-widest uppercase text-cyan-400 mb-2 block">SOLUSI TERINTEGRASI</span>
+      <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+        4 Pilar Utama Layanan <span class="text-cyan-400">Sejalan</span>
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base">
+        Kami tidak hanya memberikan saran teori. Kami membangun infrastruktur mesin, mengelola kampanye iklan, dan mengotomasi alur kerja Anda dari hulu ke hilir.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- PILAR 1: SETUP AI AGENT -->
+      <div id="ai-agent" class="card-glass rounded-3xl p-8 sm:p-10 relative overflow-hidden flex flex-col justify-between">
+        <div class="absolute -right-12 -top-12 w-48 h-48 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-2xl font-bold mb-6">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 block mb-1">Pilar 01</span>
+          <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-4">Jasa Setup AI Agent 24/7</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6">
+            Membangun karyawan virtual berbasis AI yang siap bekerja 24 jam non-stop di WhatsApp, Telegram, website, dan CRM internal perusahaan Anda.
+          </p>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-400 mb-8">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
+              <span><strong>Customer Service Cerdas:</strong> Menjawab pertanyaan calon pembeli seketika dengan gaya bahasa natural & ramah.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
+              <span><strong>Otomasi Follow-Up & Broadcast:</strong> Menyapa kembali prospek lama secara terjadwal tanpa risiko banned.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i>
+              <span><strong>Sinkronisasi Database:</strong> Setiap data pemesanan atau chat tersimpan rapi ke Google Sheets / Database bisnis.</span>
+            </li>
+          </ul>
+        </div>
+        <a href="https://wa.me/6289670236337?text=Halo%20Mas%20Agus%2C%20saya%20mau%20konsultasi%20Jasa%20Setup%20AI%20Agent..." target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300 font-bold text-sm flex items-center gap-2 group">
+          Konsultasi Setup AI Agent <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+        </a>
+      </div>
+
+      <!-- PILAR 2: JASA ADVERTISER (META & GOOGLE ADS) -->
+      <div id="advertiser" class="card-glass rounded-3xl p-8 sm:p-10 relative overflow-hidden flex flex-col justify-between">
+        <div class="absolute -right-12 -top-12 w-48 h-48 bg-blue-500/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center text-2xl font-bold mb-6">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-400 block mb-1">Pilar 02</span>
+          <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-4">Jasa Advertiser & Media Buying</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6">
+            Pengelolaan kampanye iklan digital di Meta Ads (Facebook & Instagram) dan Google Ads dengan strategi data-driven yang fokus pada profit & ROAS.
+          </p>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-400 mb-8">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-blue-400 mt-1"></i>
+              <span><strong>Riset Audiens & Angle Kreatif:</strong> Menemukan target pasar potensial yang siap membeli produk Anda.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-blue-400 mt-1"></i>
+              <span><strong>Setup Tracking CAPI & Pixel Presisi:</strong> Melacak setiap konversi lead dan penjualan tanpa kebocoran data.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-blue-400 mt-1"></i>
+              <span><strong>Scaling Kampanye Berkelanjutan:</strong> Menambah anggaran iklan secara bertahap saat rasio keuntungan sudah terbukti.</span>
+            </li>
+          </ul>
+        </div>
+        <a href="https://wa.me/6289670236337?text=Halo%20Mas%20Agus%2C%20saya%20mau%20konsultasi%20Jasa%20Advertiser%20Meta%20%26%20Google%20Ads..." target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 font-bold text-sm flex items-center gap-2 group">
+          Konsultasi Pengelolaan Iklan <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+        </a>
+      </div>
+
+      <!-- PILAR 3: ANALISA BISNIS (BUSINESS INTELLIGENCE) -->
+      <div id="analisa" class="card-glass rounded-3xl p-8 sm:p-10 relative overflow-hidden flex flex-col justify-between">
+        <div class="absolute -right-12 -top-12 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-2xl font-bold mb-6">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 block mb-1">Pilar 03</span>
+          <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-4">Analisa & Intelijen Bisnis</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6">
+            Mengubah tumpukan data transaksi, operasional, dan pemasaran menjadi dashboard keputusan yang mudah dibaca setiap hari.
+          </p>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-400 mb-8">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
+              <span><strong>Audit Kebocoran Biaya (Cost Leakage):</strong> Mengidentifikasi pos pengeluaran yang tidak produktif dan boros.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
+              <span><strong>Dashboard Metrik Real-Time:</strong> Pantau omset harian, jumlah lead baru, dan margin bersih dalam 1 layar.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
+              <span><strong>Analisa Kompetitor & Tren Pasar:</strong> Mengukur pergerakan pasar untuk memposisikan penawaran produk Anda di atas kompetitor.</span>
+            </li>
+          </ul>
+        </div>
+        <a href="https://wa.me/6289670236337?text=Halo%20Mas%20Agus%2C%20saya%20mau%20konsultasi%20Jasa%20Analisa%20Bisnis..." target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300 font-bold text-sm flex items-center gap-2 group">
+          Konsultasi Analisa Bisnis <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+        </a>
+      </div>
+
+      <!-- PILAR 4: JASA PENINGKATAN BISNIS (BUSINESS SCALING) -->
+      <div id="skalasi" class="card-glass rounded-3xl p-8 sm:p-10 relative overflow-hidden flex flex-col justify-between">
+        <div class="absolute -right-12 -top-12 w-48 h-48 bg-amber-500/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-2xl font-bold mb-6">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+          </div>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-400 block mb-1">Pilar 04</span>
+          <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-4">Jasa Peningkatan Bisnis</h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6">
+            Membantu pemilik bisnis merestrukturisasi model operasional, menyusun SOP digital, dan meningkatkan kapasitas penjualan (scaling-up).
+          </p>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-400 mb-8">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-amber-400 mt-1"></i>
+              <span><strong>Optimalisasi Sales Funnel:</strong> Memperbaiki alur dari pertama kali prospek melihat iklan hingga transfer pembayaran.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-amber-400 mt-1"></i>
+              <span><strong>Restrukturisasi Alur Kerja Tim:</strong> Membebaskan pemilik bisnis dari rutinitas teknis sehari-hari.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-circle-check text-amber-400 mt-1"></i>
+              <span><strong>Strategi Retensi & Repeat Order:</strong> Menaikkan Customer Lifetime Value (LTV) agar pelanggan terus kembali.</span>
+            </li>
+          </ul>
+        </div>
+        <a href="https://wa.me/6289670236337?text=Halo%20Mas%20Agus%2C%20saya%20mau%20konsultasi%20Jasa%20Peningkatan%20Bisnis..." target="_blank" rel="noopener" class="text-amber-400 hover:text-amber-300 font-bold text-sm flex items-center gap-2 group">
+          Konsultasi Skalasi Bisnis <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3D VIRTUAL OFFICE SHOWCASE BANNER -->
+  <section class="py-16 px-4 sm:px-8 max-w-7xl mx-auto">
+    <div class="relative rounded-3xl p-8 sm:p-12 overflow-hidden border border-cyan-500/30 bg-gradient-to-r from-slate-900 via-cyan-950/40 to-slate-900 shadow-2xl">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-bold mb-4">
+          <i class="fa-solid fa-cube text-cyan-400"></i> INTERACTIVE 3D EXPERIENCE
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mb-4">
+          Pantau Ruang Kerja Agen AI Kami Secara Langsung di Markas 3D
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base mb-8 leading-relaxed">
+          Kami mempraktikkan apa yang kami bangun. Kunjungi kantor virtual 3D interaktif Sejalan untuk melihat agen AI kami bekerja di Command Center, Advertiser Lab, dan Data Center.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/office/" class="px-8 py-3.5 rounded-2xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-extrabold text-sm shadow-xl shadow-cyan-400/25 transition flex items-center gap-2">
+            <i class="fa-solid fa-gamepad text-base"></i> Masuk ke Virtual Office 3D
+          </a>
+          <a href="https://wa.me/6289670236337?text=Halo%20Mas%20Agus%2C%20saya%20ingin%20dibuatkan%20sistem%20AI%20Agent%20seperti%20ini..." target="_blank" rel="noopener" class="px-6 py-3.5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold text-sm transition flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i> Tanya Cara Kerjanya
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ / PROSES KERJA -->
+  <section class="py-16 px-4 sm:px-8 max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="font-display text-3xl font-extrabold text-white mb-2">Bagaimana Alur Kerjasama Kami?</h2>
+      <p class="text-slate-400 text-sm">3 Langkah mudah untuk membawa bisnis Anda ke level berikutnya</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="card-glass p-6 rounded-2xl">
+        <span class="w-9 h-9 rounded-xl bg-cyan-500/20 text-cyan-400 font-extrabold text-sm flex items-center justify-center mb-4">1</span>
+        <h3 class="font-bold text-base text-white mb-2">Audit & Diagnosa Kebutuhan</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">Kami membedah alur operasional, kendala CS, performa iklan, dan struktur data bisnis Anda saat ini.</p>
+      </div>
+
+      <div class="card-glass p-6 rounded-2xl">
+        <span class="w-9 h-9 rounded-xl bg-blue-500/20 text-blue-400 font-extrabold text-sm flex items-center justify-center mb-4">2</span>
+        <h3 class="font-bold text-base text-white mb-2">Deploy Sistem & Kampanye</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">Pemasangan bot AI, integrasi alur chat, pembuatan konten iklan, dan setup dashboard pelaporan.</p>
+      </div>
+
+      <div class="card-glass p-6 rounded-2xl">
+        <span class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 font-extrabold text-sm flex items-center justify-center mb-4">3</span>
+        <h3 class="font-bold text-base text-white mb-2">Monitoring & Scaling Profit</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">Optimasi berkala setiap minggu untuk memastikan biaya efisien dan angka penjualan terus bertumbuh.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 py-12 px-4 sm:px-8 bg-[#05070d] text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white font-extrabold text-sm">
+          S
+        </div>
+        <div>
+          <span class="font-display font-bold text-sm text-white">SEJALAN</span>
+          <span class="text-[10px] text-slate-400 block">AI Agent & Performance Scaling Studio</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 font-medium text-slate-400">
+        <a href="#ai-agent" class="hover:text-cyan-400 transition">AI Agent</a>
+        <a href="#advertiser" class="hover:text-cyan-400 transition">Jasa Iklan</a>
+        <a href="#analisa" class="hover:text-cyan-400 transition">Analisa Bisnis</a>
+        <a href="#skalasi" class="hover:text-cyan-400 transition">Peningkatan Bisnis</a>
+        <a href="/office/" class="hover:text-cyan-400 transition">Virtual Office 3D</a>
+      </div>
+
+      <div>
+        <span>&copy; 2026 Sejalan. Seluruh hak cipta dilindungi.</span>
+      </div>
+    </div>
+  </footer>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"f747cfcca18a4150b219ead3f2d95595","r":1,"spa":2}' crossorigin="anonymous"></script>
+
+  <!-- ==================== SEJALAN AI CHATBOT WIDGET ==================== -->
+  <div id="sejalan-ai-widget" class="fixed bottom-6 right-4 sm:right-6 z-50 flex flex-col items-end font-sans">
+    
+    <!-- Floating Trigger Button -->
+    <div class="relative flex items-center gap-3">
+      <!-- Helper Popover Badge -->
+      <div id="ai-chat-badge" class="hidden sm:flex items-center gap-2 bg-[#0c1527]/90 border border-cyan-500/40 px-3.5 py-1.5 rounded-full shadow-lg backdrop-blur-md cursor-pointer animate-bounce" onclick="toggleSejalanChat()">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+        <span class="text-xs font-bold text-cyan-300">Tanya AI Sejalan</span>
+        <span class="text-xs">🤖</span>
+      </div>
+
+      <!-- Main Button -->
+      <button id="ai-chat-btn" onclick="toggleSejalanChat()" aria-label="Buka Chatbot AI" class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-tr from-cyan-500 via-sky-500 to-blue-600 text-slate-950 font-bold flex items-center justify-center shadow-xl shadow-cyan-500/30 hover:scale-105 active:scale-95 transition-all duration-300 border border-cyan-300/40 group">
+        <span id="ai-chat-icon" class="text-2xl text-slate-950 group-hover:rotate-12 transition">
+          <i class="fa-solid fa-robot"></i>
+        </span>
+        <span id="ai-chat-close" class="text-2xl text-slate-950 hidden">
+          <i class="fa-solid fa-xmark"></i>
+        </span>
+      </button>
+    </div>
+
+    <!-- Chat Modal Window -->
+    <div id="ai-chat-window" class="hidden fixed sm:absolute bottom-20 sm:bottom-20 right-2 sm:right-0 w-[calc(100vw-1rem)] sm:w-[410px] h-[580px] max-h-[85vh] bg-[#090f1d]/95 backdrop-blur-2xl border border-cyan-500/40 rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 z-50">
+      
+      <!-- Header -->
+      <div class="px-5 py-4 bg-gradient-to-r from-[#0c152b] via-[#09152e] to-[#0a1122] border-b border-cyan-500/20 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="relative">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center text-slate-950 font-extrabold text-lg shadow-md shadow-cyan-500/30">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 border-2 border-[#090f1d] rounded-full"></span>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <h4 class="font-display font-extrabold text-white text-sm">Sejalan AI Assistant</h4>
+              <span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">24/7</span>
+            </div>
+            <p class="text-[11px] text-slate-400 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Siap bantu konsultasi bisnis & iklan
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-1">
+          <button onclick="toggleSejalanChat()" class="w-8 h-8 rounded-lg hover:bg-white/10 text-slate-400 hover:text-white flex items-center justify-center text-sm transition">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <button onclick="toggleSejalanChat()" class="w-8 h-8 rounded-lg hover:bg-white/10 text-slate-400 hover:text-white flex items-center justify-center text-sm transition">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Alert Info -->
+      <div class="px-4 py-2 bg-cyan-950/40 border-b border-cyan-500/10 text-[11px] text-cyan-300/90 flex items-center justify-between">
+        <span class="truncate">🚀 Powered by Cloudflare Workers AI</span>
+        <a href="https://wa.me/6289670236337?text=Halo%20Mas%20Agus%2C%20saya%20ingin%20konsultasi%20layanan%20Sejalan..." target="_blank" rel="noopener" class="text-cyan-400 hover:underline font-bold whitespace-nowrap ml-2 flex items-center gap-1">
+          <i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp
+        </a>
+      </div>
+
+      <!-- Messages Stream -->
+      <div id="ai-chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3.5 text-xs text-slate-200 select-text">
+        <!-- Bot Greeting -->
+        <div class="flex items-start gap-2.5">
+          <div class="w-7 h-7 rounded-lg bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center text-xs shrink-0 mt-0.5">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div class="bg-[#121c33] border border-cyan-500/20 rounded-2xl rounded-tl-sm p-3.5 max-w-[85%] shadow-md leading-relaxed text-slate-300">
+            Halo! 👋 Saya <strong>Sejalan AI Assistant</strong>.<br><br>
+            Ada yang bisa saya bantu seputar <strong>Setup AI Agent 24/7</strong>, <strong>Jasa Advertiser (Meta & Google Ads)</strong>, atau <strong>Otomatisasi Bisnis</strong> Anda hari ini?
+          </div>
+        </div>
+
+        <!-- Quick Question Chips -->
+        <div id="ai-chips-container" class="pt-2 flex flex-wrap gap-1.5 pl-9">
+          <button onclick="sendQuickPrompt('Apa saja layanan utama di Sejalan?')" class="text-[11px] px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition text-left">
+            📌 Apa saja layanan Sejalan?
+          </button>
+          <button onclick="sendQuickPrompt('Berapa biaya setup AI Agent?')" class="text-[11px] px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition text-left">
+            💰 Berapa biaya setup AI?
+          </button>
+          <button onclick="sendQuickPrompt('Apakah AI Agent bisa diintegrasikan ke WhatsApp bisnis?')" class="text-[11px] px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition text-left">
+            📱 Bisa integrasi WhatsApp?
+          </button>
+          <button onclick="sendQuickPrompt('Saya mau konsultasi langsung dengan Mas Agus')" class="text-[11px] px-3 py-1.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition text-left">
+            💬 Konsultasi via WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <!-- Typing Indicator -->
+      <div id="ai-typing-indicator" class="hidden px-5 py-2 flex items-center gap-2 pl-12 text-slate-400 text-xs">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-bounce"></span>
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-bounce [animation-delay:0.2s]"></span>
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-bounce [animation-delay:0.4s]"></span>
+        <span class="text-[11px] text-cyan-300/70 ml-1">AI sedang mengetik...</span>
+      </div>
+
+      <!-- Input Footer -->
+      <div class="p-3.5 bg-[#0a1122] border-t border-cyan-500/20">
+        <form id="ai-chat-form" onsubmit="handleSendChat(event)" class="flex items-center gap-2">
+          <input 
+            type="text" 
+            id="ai-user-input" 
+            placeholder="Tulis pertanyaan Anda seputar AI / Ads..." 
+            class="flex-1 bg-[#10192e] border border-cyan-500/30 focus:border-cyan-400 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none transition shadow-inner"
+            autocomplete="off"
+          />
+          <button 
+            type="submit" 
+            id="ai-send-btn"
+            aria-label="Kirim Pesan"
+            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold flex items-center justify-center shadow-lg shadow-cyan-500/20 hover:scale-105 active:scale-95 transition"
+          >
+            <i class="fa-solid fa-paper-plane text-xs"></i>
+          </button>
+        </form>
+
+        <div class="mt-2 flex items-center justify-between text-[10px] text-slate-500 px-1">
+          <span>Respon otomatis real-time</span>
+          <a href="https://wa.me/6289670236337?text=Halo%20Mas%20Agus%2C%20saya%20tertarik%20konsultasi%20layanan%20Sejalan..." target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300 transition flex items-center gap-1 font-semibold">
+            <i class="fa-brands fa-whatsapp text-emerald-400"></i> Hubungi Langsung
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // State
+    const chatHistory = [];
+    let isWaitingForAi = false;
+
+    function toggleSejalanChat() {
+      const win = document.getElementById('ai-chat-window');
+      const icon = document.getElementById('ai-chat-icon');
+      const close = document.getElementById('ai-chat-close');
+      const badge = document.getElementById('ai-chat-badge');
+      
+      const isOpen = !win.classList.contains('hidden');
+      if (isOpen) {
+        win.classList.add('hidden');
+        icon.classList.remove('hidden');
+        close.classList.add('hidden');
+        if (badge) badge.classList.remove('hidden');
+      } else {
+        win.classList.remove('hidden');
+        icon.classList.add('hidden');
+        close.classList.remove('hidden');
+        if (badge) badge.classList.add('hidden');
+        setTimeout(() => {
+          document.getElementById('ai-user-input')?.focus();
+        }, 150);
+      }
+    }
+
+    function formatMessageText(text) {
+      if (!text) return '';
+      // Escape HTML
+      let escaped = text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+      
+      // Convert markdown bold **text** -> <strong>text</strong>
+      escaped = escaped.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      
+      // Convert markdown links [text](url) -> <a href="url" target="_blank" class="text-cyan-400 underline font-bold">text</a>
+      escaped = escaped.replace(/\[(.*?)\]\((https?:\/\/[^\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300 underline font-semibold">$1</a>');
+
+      // Convert linebreaks
+      escaped = escaped.replace(/\n/g, '<br>');
+      return escaped;
+    }
+
+    function appendMessage(role, text) {
+      const container = document.getElementById('ai-chat-messages');
+      const msgDiv = document.createElement('div');
+
+      if (role === 'user') {
+        msgDiv.className = 'flex items-start justify-end gap-2.5';
+        msgDiv.innerHTML = `
+          <div class="bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-2xl rounded-tr-sm p-3.5 max-w-[85%] shadow-md leading-relaxed">
+            ${formatMessageText(text)}
+          </div>
+          <div class="w-7 h-7 rounded-lg bg-blue-600/30 text-blue-300 border border-blue-400/30 flex items-center justify-center text-xs shrink-0 mt-0.5">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        `;
+      } else {
+        msgDiv.className = 'flex items-start gap-2.5';
+        msgDiv.innerHTML = `
+          <div class="w-7 h-7 rounded-lg bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center text-xs shrink-0 mt-0.5">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div class="bg-[#121c33] border border-cyan-500/20 rounded-2xl rounded-tl-sm p-3.5 max-w-[85%] shadow-md leading-relaxed text-slate-300">
+            ${formatMessageText(text)}
+          </div>
+        `;
+      }
+
+      container.appendChild(msgDiv);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function sendQuickPrompt(promptText) {
+      const input = document.getElementById('ai-user-input');
+      input.value = promptText;
+      handleSendChat(new Event('submit'));
+      const chips = document.getElementById('ai-chips-container');
+      if (chips) chips.style.display = 'none';
+    }
+
+    async function handleSendChat(e) {
+      if (e) e.preventDefault();
+      const input = document.getElementById('ai-user-input');
+      const text = input.value.trim();
+      if (!text || isWaitingForAi) return;
+
+      // Clear input
+      input.value = '';
+      
+      // Hide chips after first user query
+      const chips = document.getElementById('ai-chips-container');
+      if (chips) chips.style.display = 'none';
+
+      // Append user message
+      appendMessage('user', text);
+      chatHistory.push({ role: 'user', content: text });
+
+      // Show typing indicator
+      isWaitingForAi = true;
+      const indicator = document.getElementById('ai-typing-indicator');
+      indicator.classList.remove('hidden');
+      const container = document.getElementById('ai-chat-messages');
+      container.scrollTop = container.scrollHeight;
+
+      try {
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ messages: chatHistory })
+        });
+
+        if (!response.ok) {
+          throw new Error('Server error');
+        }
+
+        const data = await response.json();
+        const reply = data.reply || "Terima kasih! Silakan konsultasikan langsung dengan Mas Agus via WhatsApp di https://wa.me/6289670236337.";
+        
+        appendMessage('assistant', reply);
+        chatHistory.push({ role: 'assistant', content: reply });
+      } catch (err) {
+        console.warn('API error, using local fallback:', err);
+        // Fallback intelligent response
+        let fallbackReply = "Halo! Terima kasih atas pertanyaannya. Saat ini tim kami siap membantu setup AI Agent 24/7 dan strategi Ads bisnis Anda. Silakan hubungi Mas Agus langsung di WhatsApp: https://wa.me/6289670236337.";
+        const low = text.toLowerCase();
+        if (low.includes('biaya') || low.includes('harga') || low.includes('paket')) {
+          fallbackReply = "Investasi layanan Sejalan disesuaikan dengan skala dan target bisnis Anda. Anda dapat berdiskusi gratis dengan Mas Agus via WhatsApp di https://wa.me/6289670236337 untuk mendapatkan penawaran terbaik!";
+        } else if (low.includes('layanan') || low.includes('jasa')) {
+          fallbackReply = "Layanan Sejalan mencakup: 1) Setup AI Agent 24/7, 2) Jasa Advertiser Meta & Google Ads, 3) Analisa & Intelijen Bisnis, dan 4) Peningkatan Bisnis. Konsultasi langsung via WhatsApp di https://wa.me/6289670236337.";
+        }
+        appendMessage('assistant', fallbackReply);
+        chatHistory.push({ role: 'assistant', content: fallbackReply });
+      } finally {
+        isWaitingForAi = false;
+        indicator.classList.add('hidden');
+        container.scrollTop = container.scrollHeight;
+      }
+    }
+  </script>
+  <!-- ==================== END SEJALAN AI CHATBOT WIDGET ==================== -->
+
+</body>
+</html>

@@ -423,10 +423,9 @@
     </div>
   </footer>
 
-  <!-- ==================== SEJALAN AI CHATBOT WIDGET ==================== -->
-  <div id="sejalan-ai-widget" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end font-sans">
-    
-    <!-- Floating Trigger Button -->
+    <!-- ==================== SEJALAN AI CHATBOT WIDGET ==================== -->
+  <!-- Floating Trigger Button -->
+  <div id="sejalan-ai-widget" class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end font-sans">
     <div class="relative flex items-center gap-2.5 sm:gap-3">
       <!-- Helper Popover Badge -->
       <div id="ai-chat-badge" class="hidden sm:flex items-center gap-2 bg-[#0c1527]/90 border border-cyan-500/40 px-3.5 py-1.5 rounded-full shadow-lg backdrop-blur-md cursor-pointer animate-bounce" onclick="toggleSejalanChat()">
@@ -436,124 +435,138 @@
       </div>
 
       <!-- Main Button -->
-      <button id="ai-chat-btn" onclick="toggleSejalanChat()" aria-label="Buka Chatbot AI" class="w-13 h-13 sm:w-16 sm:h-16 p-3 sm:p-4 rounded-2xl bg-gradient-to-tr from-cyan-500 via-sky-500 to-blue-600 text-slate-950 font-bold flex items-center justify-center shadow-xl shadow-cyan-500/30 hover:scale-105 active:scale-95 transition-all duration-300 border border-cyan-300/40 group">
-        <span id="ai-chat-icon" class="text-xl sm:text-2xl text-slate-950 group-hover:rotate-12 transition">
+      <button id="ai-chat-btn" onclick="toggleSejalanChat()" aria-label="Buka Chatbot AI" class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-tr from-cyan-500 via-sky-500 to-blue-600 text-slate-950 font-bold flex items-center justify-center shadow-xl shadow-cyan-500/30 hover:scale-105 active:scale-95 transition-all duration-300 border border-cyan-300/40 group">
+        <span id="ai-chat-icon" class="text-2xl text-slate-950 group-hover:rotate-12 transition">
           <i class="fa-solid fa-robot"></i>
         </span>
-        <span id="ai-chat-close" class="text-xl sm:text-2xl text-slate-950 hidden">
+        <span id="ai-chat-close" class="text-2xl text-slate-950 hidden">
           <i class="fa-solid fa-xmark"></i>
         </span>
       </button>
     </div>
+  </div>
 
-    <!-- Chat Modal Window -->
-    <div id="ai-chat-window" class="hidden fixed inset-x-3 bottom-18 sm:inset-x-auto sm:right-0 sm:bottom-20 w-auto sm:w-[410px] h-[78vh] sm:h-[580px] max-h-[620px] bg-[#090f1d]/95 backdrop-blur-2xl border border-cyan-500/40 rounded-2xl sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 z-50">
-      
-      <!-- Header -->
-      <div class="px-4 sm:px-5 py-3 sm:py-4 bg-gradient-to-r from-[#0c152b] via-[#09152e] to-[#0a1122] border-b border-cyan-500/20 flex items-center justify-between">
-        <div class="flex items-center gap-2.5 sm:gap-3">
-          <div class="relative">
-            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center text-slate-950 font-extrabold text-base sm:text-lg shadow-md shadow-cyan-500/30">
-              <i class="fa-solid fa-robot"></i>
-            </div>
-            <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-emerald-400 border-2 border-[#090f1d] rounded-full"></span>
-          </div>
-          <div>
-            <div class="flex items-center gap-1.5">
-              <h4 class="font-display font-extrabold text-white text-xs sm:text-sm">Sejalan AI Assistant</h4>
-              <span class="px-1.5 py-0.2 rounded text-[9px] font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">24/7</span>
-            </div>
-            <p class="text-[10px] sm:text-[11px] text-slate-400 flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Konsultasi Bisnis & Ads
-            </p>
-          </div>
-        </div>
+  <!-- Chat Modal Window: Fullscreen Pop-up on Mobile, Floating Card on Desktop -->
+  <div id="ai-chat-window" class="hidden fixed inset-0 sm:inset-auto sm:right-6 sm:bottom-22 z-50 w-full sm:w-[420px] h-[100dvh] sm:h-[600px] max-h-[100dvh] sm:max-h-[85vh] bg-[#070b14] sm:bg-[#090f1d]/95 sm:backdrop-blur-2xl sm:border sm:border-cyan-500/40 sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden transition-all duration-200">
+    
+    <!-- Header -->
+    <div class="px-4 py-3 sm:px-5 sm:py-4 bg-gradient-to-r from-[#0c152b] via-[#09152e] to-[#0a1122] border-b border-cyan-500/20 flex items-center justify-between shrink-0">
+      <div class="flex items-center gap-3">
+        <!-- Back Button (Mobile) -->
+        <button onclick="toggleSejalanChat()" aria-label="Kembali ke Website" class="sm:hidden w-8 h-8 rounded-xl bg-white/5 border border-white/10 text-cyan-400 flex items-center justify-center text-sm active:scale-95 transition">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
 
-        <div class="flex items-center gap-1">
-          <button onclick="toggleSejalanChat()" class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg hover:bg-white/10 text-slate-400 hover:text-white flex items-center justify-center text-xs sm:text-sm transition">
-            <i class="fa-solid fa-minus"></i>
-          </button>
-          <button onclick="toggleSejalanChat()" class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg hover:bg-white/10 text-slate-400 hover:text-white flex items-center justify-center text-xs sm:text-sm transition">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Quick Alert Info -->
-      <div class="px-3.5 sm:px-4 py-1.5 sm:py-2 bg-cyan-950/40 border-b border-cyan-500/10 text-[10px] sm:text-[11px] text-cyan-300/90 flex items-center justify-between">
-        <span class="truncate">🚀 Powered by Cloudflare Workers AI</span>
-        <a href="https://wa.me/6289670236337?text=Halo%20Mas%20Agus%2C%20saya%20ingin%20konsultasi%20layanan%20Sejalan..." target="_blank" rel="noopener" class="text-cyan-400 hover:underline font-bold whitespace-nowrap ml-2 flex items-center gap-1">
-          <i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp
-        </a>
-      </div>
-
-      <!-- Messages Stream -->
-      <div id="ai-chat-messages" class="flex-1 p-3.5 sm:p-4 overflow-y-auto space-y-3 text-xs text-slate-200 select-text">
-        <!-- Bot Greeting -->
-        <div class="flex items-start gap-2 sm:gap-2.5">
-          <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center text-[10px] sm:text-xs shrink-0 mt-0.5">
+        <div class="relative">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center text-slate-950 font-extrabold text-base sm:text-lg shadow-md shadow-cyan-500/30">
             <i class="fa-solid fa-robot"></i>
           </div>
-          <div class="bg-[#121c33] border border-cyan-500/20 rounded-2xl rounded-tl-sm p-3 sm:p-3.5 max-w-[88%] sm:max-w-[85%] shadow-md leading-relaxed text-slate-300 text-[11px] sm:text-xs">
-            Halo! 👋 Saya <strong>Sejalan AI Assistant</strong>.<br><br>
-            Ada yang bisa saya bantu seputar <strong>Setup AI Agent 24/7</strong>, <strong>Jasa Advertiser (Meta & Google Ads)</strong>, atau <strong>Otomatisasi Bisnis</strong> Anda hari ini?
+          <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-emerald-400 border-2 border-[#090f1d] rounded-full"></span>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <h4 class="font-display font-extrabold text-white text-sm sm:text-base">Sejalan AI Assistant</h4>
+            <span class="px-1.5 py-0.2 rounded text-[9px] font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">24/7</span>
           </div>
-        </div>
-
-        <!-- Quick Question Chips (Horizontal Swipeable on mobile) -->
-        <div id="ai-chips-container" class="pt-2 flex flex-nowrap sm:flex-wrap gap-1.5 overflow-x-auto no-scrollbar pb-1 sm:pb-0 pl-8 sm:pl-9">
-          <button onclick="sendQuickPrompt('Apa saja layanan utama di Sejalan?')" class="text-[10px] sm:text-[11px] px-2.5 sm:px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition text-left whitespace-nowrap sm:whitespace-normal shrink-0">
-            📌 Apa saja layanan Sejalan?
-          </button>
-          <button onclick="sendQuickPrompt('Berapa biaya setup AI Agent?')" class="text-[10px] sm:text-[11px] px-2.5 sm:px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition text-left whitespace-nowrap sm:whitespace-normal shrink-0">
-            💰 Berapa biaya setup AI?
-          </button>
-          <button onclick="sendQuickPrompt('Apakah AI Agent bisa diintegrasikan ke WhatsApp bisnis?')" class="text-[10px] sm:text-[11px] px-2.5 sm:px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition text-left whitespace-nowrap sm:whitespace-normal shrink-0">
-            📱 Bisa integrasi WhatsApp?
-          </button>
-          <button onclick="sendQuickPrompt('Saya mau konsultasi langsung dengan Mas Agus')" class="text-[10px] sm:text-[11px] px-2.5 sm:px-3 py-1.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition text-left whitespace-nowrap sm:whitespace-normal shrink-0">
-            💬 Chat via WhatsApp
-          </button>
+          <p class="text-[11px] text-slate-400 flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Konsultasi Bisnis & Ads
+          </p>
         </div>
       </div>
 
-      <!-- Typing Indicator -->
-      <div id="ai-typing-indicator" class="hidden px-4 py-2 flex items-center gap-2 pl-10 sm:pl-12 text-slate-400 text-xs">
-        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-bounce"></span>
-        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-bounce [animation-delay:0.2s]"></span>
-        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-bounce [animation-delay:0.4s]"></span>
-        <span class="text-[10px] sm:text-[11px] text-cyan-300/70 ml-1">AI sedang mengetik...</span>
+      <div class="flex items-center gap-1.5">
+        <!-- Selesai Chat button (Mobile) -->
+        <button onclick="toggleSejalanChat()" class="sm:hidden px-3 py-1.5 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-bold active:scale-95 transition flex items-center gap-1">
+          Selesai <i class="fa-solid fa-check text-[10px]"></i>
+        </button>
+
+        <!-- Desktop Controls -->
+        <button onclick="toggleSejalanChat()" title="Minimize" class="hidden sm:flex w-8 h-8 rounded-lg hover:bg-white/10 text-slate-400 hover:text-white items-center justify-center text-sm transition">
+          <i class="fa-solid fa-minus"></i>
+        </button>
+        <button onclick="toggleSejalanChat()" title="Tutup" class="hidden sm:flex w-8 h-8 rounded-lg hover:bg-white/10 text-slate-400 hover:text-white items-center justify-center text-sm transition">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
       </div>
-
-      <!-- Input Footer -->
-      <div class="p-3 sm:p-3.5 bg-[#0a1122] border-t border-cyan-500/20">
-        <form id="ai-chat-form" onsubmit="handleSendChat(event)" class="flex items-center gap-2">
-          <input 
-            type="text" 
-            id="ai-user-input" 
-            placeholder="Tulis pertanyaan seputar AI & Ads..." 
-            class="flex-1 bg-[#10192e] border border-cyan-500/30 focus:border-cyan-400 rounded-xl px-3.5 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none transition shadow-inner"
-            autocomplete="off"
-          />
-          <button 
-            type="submit" 
-            id="ai-send-btn"
-            aria-label="Kirim Pesan"
-            class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold flex items-center justify-center shadow-lg shadow-cyan-500/20 hover:scale-105 active:scale-95 transition shrink-0"
-          >
-            <i class="fa-solid fa-paper-plane text-xs"></i>
-          </button>
-        </form>
-
-        <div class="mt-2 flex items-center justify-between text-[10px] text-slate-500 px-1">
-          <span>Respon AI real-time</span>
-          <a href="https://wa.me/6289670236337?text=Halo%20Mas%20Agus%2C%20saya%20tertarik%20konsultasi%20layanan%20Sejalan..." target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300 transition flex items-center gap-1 font-semibold">
-            <i class="fa-brands fa-whatsapp text-emerald-400"></i> Hubungi Mas Agus
-          </a>
-        </div>
-      </div>
-
     </div>
+
+    <!-- Quick Alert Info -->
+    <div class="px-4 py-2 bg-cyan-950/40 border-b border-cyan-500/10 text-[11px] text-cyan-300/90 flex items-center justify-between shrink-0">
+      <span class="truncate">🚀 Powered by Cloudflare Workers AI</span>
+      <a href="https://wa.me/6289670236337?text=Halo%20Mas%20Agus%2C%20saya%20ingin%20konsultasi%20layanan%20Sejalan..." target="_blank" rel="noopener" class="text-cyan-400 hover:underline font-bold whitespace-nowrap ml-2 flex items-center gap-1">
+        <i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp
+      </a>
+    </div>
+
+    <!-- Messages Stream -->
+    <div id="ai-chat-messages" class="flex-1 p-4 overflow-y-auto overscroll-contain space-y-3.5 text-xs sm:text-sm text-slate-200 select-text">
+      <!-- Bot Greeting -->
+      <div class="flex items-start gap-2.5 sm:gap-3">
+        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center text-xs shrink-0 mt-0.5">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <div class="bg-[#121c33] border border-cyan-500/20 rounded-2xl rounded-tl-sm p-3.5 sm:p-4 max-w-[88%] sm:max-w-[85%] shadow-md leading-relaxed text-slate-300 text-xs sm:text-sm">
+          Halo! 👋 Saya <strong>Sejalan AI Assistant</strong>.<br><br>
+          Ada yang bisa saya bantu seputar <strong>Setup AI Agent 24/7</strong>, <strong>Jasa Advertiser (Meta & Google Ads)</strong>, atau <strong>Otomatisasi Bisnis</strong> Anda hari ini?
+        </div>
+      </div>
+
+      <!-- Quick Question Chips -->
+      <div id="ai-chips-container" class="pt-2 flex flex-wrap gap-1.5 pl-9 sm:pl-11">
+        <button onclick="sendQuickPrompt('Apa saja layanan utama di Sejalan?')" class="text-xs px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition text-left">
+          📌 Apa saja layanan Sejalan?
+        </button>
+        <button onclick="sendQuickPrompt('Berapa biaya setup AI Agent?')" class="text-xs px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition text-left">
+          💰 Berapa biaya setup AI?
+        </button>
+        <button onclick="sendQuickPrompt('Apakah AI Agent bisa diintegrasikan ke WhatsApp bisnis?')" class="text-xs px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition text-left">
+          📱 Bisa integrasi WhatsApp?
+        </button>
+        <button onclick="sendQuickPrompt('Saya mau konsultasi langsung dengan Mas Agus')" class="text-xs px-3 py-1.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition text-left">
+          💬 Chat via WhatsApp
+        </button>
+      </div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div id="ai-typing-indicator" class="hidden px-4 py-2 flex items-center gap-2 pl-12 text-slate-400 text-xs shrink-0">
+      <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-bounce"></span>
+      <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-bounce [animation-delay:0.2s]"></span>
+      <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-bounce [animation-delay:0.4s]"></span>
+      <span class="text-xs text-cyan-300/70 ml-1">AI sedang mengetik...</span>
+    </div>
+
+    <!-- Input Footer -->
+    <div class="p-3.5 sm:p-4 bg-[#0a1122] border-t border-cyan-500/20 shrink-0">
+      <form id="ai-chat-form" onsubmit="handleSendChat(event)" class="flex items-center gap-2">
+        <input 
+          type="text" 
+          id="ai-user-input" 
+          placeholder="Tulis pertanyaan seputar AI & Ads..." 
+          class="flex-1 bg-[#10192e] border border-cyan-500/30 focus:border-cyan-400 rounded-xl px-4 py-2.5 sm:py-3 text-sm text-white placeholder-slate-500 focus:outline-none transition shadow-inner"
+          autocomplete="off"
+        />
+        <button 
+          type="submit" 
+          id="ai-send-btn"
+          aria-label="Kirim Pesan"
+          class="w-11 h-11 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold flex items-center justify-center shadow-lg shadow-cyan-500/20 hover:scale-105 active:scale-95 transition shrink-0"
+        >
+          <i class="fa-solid fa-paper-plane text-sm"></i>
+        </button>
+      </form>
+
+      <div class="mt-2.5 flex items-center justify-between text-xs text-slate-400 px-1">
+        <button type="button" onclick="toggleSejalanChat()" class="text-slate-400 hover:text-cyan-300 transition flex items-center gap-1.5 font-medium sm:hidden">
+          <i class="fa-solid fa-arrow-left text-[11px]"></i> Kembali ke website
+        </button>
+        <span class="hidden sm:inline text-[11px] text-slate-500">Respon AI real-time 24/7</span>
+        <a href="https://wa.me/6289670236337?text=Halo%20Mas%20Agus%2C%20saya%20tertarik%20konsultasi%20layanan%20Sejalan..." target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300 transition flex items-center gap-1 font-bold">
+          <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i> Chat Mas Agus
+        </a>
+      </div>
+    </div>
+
   </div>
 
   <script>
@@ -581,20 +594,31 @@
       const icon = document.getElementById('ai-chat-icon');
       const close = document.getElementById('ai-chat-close');
       const badge = document.getElementById('ai-chat-badge');
+      const widgetBtn = document.getElementById('sejalan-ai-widget');
       
       const isOpen = !win.classList.contains('hidden');
       if (isOpen) {
+        // Close chat and return to web
         win.classList.add('hidden');
-        icon.classList.remove('hidden');
-        close.classList.add('hidden');
+        if (icon) icon.classList.remove('hidden');
+        if (close) close.classList.add('hidden');
         if (badge) badge.classList.remove('hidden');
+        if (widgetBtn) widgetBtn.classList.remove('hidden');
+        document.body.style.overflow = '';
       } else {
+        // Open chat fullscreen on mobile / floating on desktop
         win.classList.remove('hidden');
-        icon.classList.add('hidden');
-        close.classList.remove('hidden');
+        if (icon) icon.classList.add('hidden');
+        if (close) close.classList.remove('hidden');
         if (badge) badge.classList.add('hidden');
+        if (window.innerWidth < 640) {
+          if (widgetBtn) widgetBtn.classList.add('hidden');
+          document.body.style.overflow = 'hidden';
+        }
         setTimeout(() => {
           document.getElementById('ai-user-input')?.focus();
+          const container = document.getElementById('ai-chat-messages');
+          if (container) container.scrollTop = container.scrollHeight;
         }, 150);
       }
     }
@@ -617,22 +641,22 @@
       const msgDiv = document.createElement('div');
 
       if (role === 'user') {
-        msgDiv.className = 'flex items-start justify-end gap-2 sm:gap-2.5';
+        msgDiv.className = 'flex items-start justify-end gap-2.5 sm:gap-3';
         msgDiv.innerHTML = `
-          <div class="bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-2xl rounded-tr-sm p-3 sm:p-3.5 max-w-[85%] shadow-md leading-relaxed text-[11px] sm:text-xs">
+          <div class="bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-2xl rounded-tr-sm p-3.5 sm:p-4 max-w-[85%] shadow-md leading-relaxed text-xs sm:text-sm">
             ${formatMessageText(text)}
           </div>
-          <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-blue-600/30 text-blue-300 border border-blue-400/30 flex items-center justify-center text-[10px] sm:text-xs shrink-0 mt-0.5">
+          <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-blue-600/30 text-blue-300 border border-blue-400/30 flex items-center justify-center text-xs shrink-0 mt-0.5">
             <i class="fa-solid fa-user"></i>
           </div>
         `;
       } else {
-        msgDiv.className = 'flex items-start gap-2 sm:gap-2.5';
+        msgDiv.className = 'flex items-start gap-2.5 sm:gap-3';
         msgDiv.innerHTML = `
-          <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center text-[10px] sm:text-xs shrink-0 mt-0.5">
+          <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 flex items-center justify-center text-xs shrink-0 mt-0.5">
             <i class="fa-solid fa-robot"></i>
           </div>
-          <div class="bg-[#121c33] border border-cyan-500/20 rounded-2xl rounded-tl-sm p-3 sm:p-3.5 max-w-[88%] sm:max-w-[85%] shadow-md leading-relaxed text-slate-300 text-[11px] sm:text-xs">
+          <div class="bg-[#121c33] border border-cyan-500/20 rounded-2xl rounded-tl-sm p-3.5 sm:p-4 max-w-[88%] sm:max-w-[85%] shadow-md leading-relaxed text-slate-300 text-xs sm:text-sm">
             ${formatMessageText(text)}
           </div>
         `;

@@ -431,7 +431,7 @@
       <div id="ai-chat-badge" class="hidden sm:flex items-center gap-2 bg-[#0c1527]/90 border border-cyan-500/40 px-3.5 py-1.5 rounded-full shadow-lg backdrop-blur-md cursor-pointer animate-bounce" onclick="toggleSejalanChat()">
         <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
         <span class="text-xs font-bold text-cyan-300">Tanya AI Sejalan</span>
-        <span class="text-xs">🤖</span>
+        <i class="fa-solid fa-robot text-xs text-cyan-400"></i>
       </div>
 
       <!-- Main Button -->
@@ -492,7 +492,7 @@
 
     <!-- Quick Alert Info -->
     <div class="px-4 py-2 bg-cyan-950/40 border-b border-cyan-500/10 text-[11px] text-cyan-300/90 flex items-center justify-between shrink-0">
-      <span class="truncate">🚀 Powered by Cloudflare Workers AI</span>
+      <span class="truncate flex items-center gap-1.5"><i class="fa-solid fa-bolt text-cyan-400"></i> Powered by Cloudflare Workers AI</span>
       <a href="https://wa.me/6289670236337?text=Halo%20Mas%20Agus%2C%20saya%20ingin%20konsultasi%20layanan%20Sejalan..." target="_blank" rel="noopener" class="text-cyan-400 hover:underline font-bold whitespace-nowrap ml-2 flex items-center gap-1">
         <i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp
       </a>
@@ -506,7 +506,7 @@
           <i class="fa-solid fa-robot"></i>
         </div>
         <div class="bg-[#121c33] border border-cyan-500/20 rounded-2xl rounded-tl-sm p-3.5 sm:p-4 max-w-[88%] sm:max-w-[85%] shadow-md leading-relaxed text-slate-300 text-xs sm:text-sm">
-          Halo! 👋 Saya <strong>Sejalan AI Assistant</strong>.<br><br>
+          Halo! Saya <strong>Sejalan AI Assistant</strong>.<br><br>
           Ada yang bisa saya bantu seputar <strong>Setup AI Agent 24/7</strong>, <strong>Jasa Advertiser (Meta & Google Ads)</strong>, atau <strong>Otomatisasi Bisnis</strong> Anda hari ini?
         </div>
       </div>
@@ -514,16 +514,16 @@
       <!-- Quick Question Chips -->
       <div id="ai-chips-container" class="pt-2 flex flex-wrap gap-1.5 pl-9 sm:pl-11">
         <button onclick="sendQuickPrompt('Apa saja layanan utama di Sejalan?')" class="text-xs px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition text-left">
-          📌 Apa saja layanan Sejalan?
+          <i class="fa-solid fa-layer-group text-[10px] mr-1"></i> Apa saja layanan Sejalan?
         </button>
         <button onclick="sendQuickPrompt('Berapa biaya setup AI Agent?')" class="text-xs px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition text-left">
-          💰 Berapa biaya setup AI?
+          <i class="fa-solid fa-tags text-[10px] mr-1"></i> Berapa biaya setup AI?
         </button>
         <button onclick="sendQuickPrompt('Apakah AI Agent bisa diintegrasikan ke WhatsApp bisnis?')" class="text-xs px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition text-left">
-          📱 Bisa integrasi WhatsApp?
+          <i class="fa-brands fa-whatsapp text-[10px] mr-1"></i> Bisa integrasi WhatsApp?
         </button>
         <button onclick="sendQuickPrompt('Saya mau konsultasi langsung dengan Mas Agus')" class="text-xs px-3 py-1.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition text-left">
-          💬 Chat via WhatsApp
+          <i class="fa-solid fa-comment-dots text-[10px] mr-1"></i> Chat via WhatsApp
         </button>
       </div>
     </div>
